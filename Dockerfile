@@ -1,7 +1,7 @@
 FROM python:2-slim
 
 RUN apt-get update && mkdir -p /usr/share/man/man1 /usr/share/man/man7
-RUN apt-get install -y libpq-dev postgresql-client gcc
+RUN apt-get install -y libpq-dev postgresql-client gcc curl
 
 WORKDIR /usr/src/app
 COPY src/ /usr/src/app/
